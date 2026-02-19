@@ -3,10 +3,10 @@ import Link from "next/link";
 export default function HowItWorksPage() {
   return (
     <>
-      <section className="border-b border-brand-sand bg-gradient-to-b from-white to-brand-cream py-16 sm:py-24">
+      <section className="border-b border-brand-sand bg-gradient-to-b from-white to-brand-blush py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h1 className="section-heading text-center">How Local Loop works</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-brand-navy/70">
+          <h1 className="section-heading text-center">How Collablee works</h1>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-brand-green/70">
             Same marketplace, two paths. We speak to businesses and creators equally—here's
             the flow for each.
           </p>
@@ -17,8 +17,8 @@ export default function HowItWorksPage() {
       <section id="businesses" className="border-b border-brand-sand bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="section-heading">For businesses</h2>
-          <p className="mt-2 max-w-xl text-brand-navy/70">
-            Get authentic UGC without agency budgets. Pay for content that performs.
+          <p className="mt-2 max-w-xl text-brand-green/70">
+            Get authentic UGC without agency budgets. Pay for content that performs. Trust that creators will deliver—we handle agreements, payments, and operations.
           </p>
           <ol className="mt-12 space-y-10">
             {[
@@ -44,12 +44,12 @@ export default function HowItWorksPage() {
               },
             ].map(({ step, title, body }) => (
               <li key={step} className="flex gap-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal/15 font-display font-bold text-brand-teal">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-green/15 font-bold text-brand-green">
                   {step}
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-brand-navy">{title}</h3>
-                  <p className="mt-2 text-brand-navy/70">{body}</p>
+                  <h3 className="text-lg font-semibold text-brand-green">{title}</h3>
+                  <p className="mt-2 text-brand-green/70">{body}</p>
                 </div>
               </li>
             ))}
@@ -63,11 +63,11 @@ export default function HowItWorksPage() {
       </section>
 
       {/* For creators */}
-      <section id="creators" className="border-b border-brand-sand bg-brand-cream py-16 sm:py-24">
+      <section id="creators" className="border-b border-brand-sand bg-brand-blush py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="section-heading">For creators</h2>
-          <p className="mt-2 max-w-xl text-brand-navy/70">
-            Earn from home. Work with brands you like. Get base pay plus upside when your content wins.
+          <p className="mt-2 max-w-xl text-brand-green/70">
+            Earn from home. Work with brands you like. Get base pay plus upside when your content wins. Passion over paycheque—we give you a launch pad and credibility.
           </p>
           <ol className="mt-12 space-y-10">
             {[
@@ -93,12 +93,12 @@ export default function HowItWorksPage() {
               },
             ].map(({ step, title, body }) => (
               <li key={step} className="flex gap-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-teal/15 font-display font-bold text-brand-teal">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-green/15 font-bold text-brand-green">
                   {step}
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-brand-navy">{title}</h3>
-                  <p className="mt-2 text-brand-navy/70">{body}</p>
+                  <h3 className="text-lg font-semibold text-brand-green">{title}</h3>
+                  <p className="mt-2 text-brand-green/70">{body}</p>
                 </div>
               </li>
             ))}
@@ -115,25 +115,25 @@ export default function HowItWorksPage() {
       <section className="border-b border-brand-sand bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="section-heading text-center">Protection for both sides</h2>
-          <p className="mx-auto mt-4 max-w-xl text-center text-brand-navy/70">
-            We facilitate the collaboration and keep everyone aligned.
+          <p className="mx-auto mt-4 max-w-xl text-center text-brand-green/70">
+            We facilitate the collaboration and keep everyone aligned. Clear contracts, record of communication, and arbitration when needed.
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             <div className="card text-center">
-              <h3 className="font-display font-semibold text-brand-navy">Clear contracts</h3>
-              <p className="mt-2 text-sm text-brand-navy/70">
+              <h3 className="font-semibold text-brand-green">Clear contracts</h3>
+              <p className="mt-2 text-sm text-brand-green/70">
                 Agreed deliverables, pay structure, and performance thresholds. No surprises.
               </p>
             </div>
             <div className="card text-center">
-              <h3 className="font-display font-semibold text-brand-navy">Record of communication</h3>
-              <p className="mt-2 text-sm text-brand-navy/70">
+              <h3 className="font-semibold text-brand-green">Record of communication</h3>
+              <p className="mt-2 text-sm text-brand-green/70">
                 All messages and approvals live on the platform. Easy to reference and audit.
               </p>
             </div>
             <div className="card text-center">
-              <h3 className="font-display font-semibold text-brand-navy">Arbitration</h3>
-              <p className="mt-2 text-sm text-brand-navy/70">
+              <h3 className="font-semibold text-brand-green">Arbitration</h3>
+              <p className="mt-2 text-sm text-brand-green/70">
                 If something goes wrong, we help resolve disputes fairly so both sides are protected.
               </p>
             </div>
@@ -142,9 +142,9 @@ export default function HowItWorksPage() {
       </section>
 
       {/* Toronto CTA */}
-      <section className="bg-brand-navy py-16 text-white sm:py-20">
+      <section className="bg-brand-green py-16 text-white sm:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">
             Launching in Toronto first
           </h2>
           <p className="mt-4 text-white/80">
@@ -154,7 +154,7 @@ export default function HowItWorksPage() {
             <Link href="/campaigns#post" className="rounded-lg border border-white/30 bg-white/10 px-6 py-3 font-medium text-white hover:bg-white/20">
               For businesses
             </Link>
-            <Link href="/creators#join" className="btn-primary bg-brand-teal hover:bg-teal-500">
+            <Link href="/creators#join" className="btn-primary">
               For creators
             </Link>
           </div>
