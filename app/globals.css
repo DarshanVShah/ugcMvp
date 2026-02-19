@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-navy: #0f1729;
+  --brand-teal: #0d9488;
+  --brand-cream: #faf8f5;
+  --brand-coral: #e07c5a;
+}
+
+body {
+  @apply bg-brand-cream text-brand-navy font-body antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand-teal px-6 py-3 font-medium text-white shadow-md transition hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-offset-2;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-brand-navy bg-transparent px-6 py-3 font-medium text-brand-navy transition hover:bg-brand-navy hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-navy focus:ring-offset-2;
+  }
+  .section-heading {
+    @apply font-display text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl;
+  }
+  .card {
+    @apply rounded-2xl border border-brand-sand bg-white p-6 shadow-sm transition hover:shadow-md;
+  }
+}
