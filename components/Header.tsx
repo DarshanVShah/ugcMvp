@@ -4,11 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+const BUSINESS_LOGIN_URL = "https://slep-back-2.primary-41b.workers.dev/";
+
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How it works" },
   { href: "/campaigns", label: "Campaigns" },
   { href: "/creators", label: "Creators" },
+  { href: "/dashboard", label: "Dashboard" },
 ];
 
 export function Header() {
@@ -37,11 +40,16 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <Link href="/campaigns#post" className="btn-secondary text-sm py-2 px-4">
-            For businesses
-          </Link>
-          <Link href="/creators#join" className="btn-primary text-sm py-2 px-4">
-            For creators
+          <a
+            href={BUSINESS_LOGIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary text-sm py-2 px-4"
+          >
+            Login as business
+          </a>
+          <Link href="/dashboard" className="btn-primary text-sm py-2 px-4">
+            Creator dashboard
           </Link>
         </div>
         <button
@@ -73,11 +81,17 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-2 flex flex-col gap-2 border-t border-brand-sand pt-3">
-              <Link href="/campaigns#post" className="btn-secondary text-sm py-2" onClick={() => setOpen(false)}>
-                For businesses
-              </Link>
-              <Link href="/creators#join" className="btn-primary text-sm py-2" onClick={() => setOpen(false)}>
-                For creators
+              <a
+                href={BUSINESS_LOGIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary text-sm py-2 text-center"
+                onClick={() => setOpen(false)}
+              >
+                Login as business
+              </a>
+              <Link href="/dashboard" className="btn-primary text-sm py-2" onClick={() => setOpen(false)}>
+                Creator dashboard
               </Link>
             </div>
           </nav>

@@ -175,3 +175,26 @@ export const creators: Creator[] = [
     avatar: "PS",
   },
 ];
+
+// Example creator dashboard (logged-in view)
+export const creatorDashboard = {
+  creator: creators[0], // Maya Chen as example
+  stats: {
+    totalEarnings: 340,
+    pendingPayout: 65,
+    activeCollabs: 2,
+    contentSubmitted: 6,
+  },
+  activeCollabs: [
+    { id: "1", businessName: "Neighbourhood Coffee", status: "Content approved, tracking", deadline: "Mar 15" },
+    { id: "5", businessName: "Greenhouse Eats", status: "Draft due", deadline: "Feb 20" },
+  ],
+  contentPerformance: [
+    { id: "c1", brand: "Neighbourhood Coffee", type: "Reel", views: 12400, status: "Live", earnings: 125 },
+    { id: "c2", brand: "Neighbourhood Coffee", type: "Reel", views: 3200, status: "Live", earnings: 25 },
+    { id: "c3", brand: "Greenhouse Eats", type: "Reel", views: 8900, status: "Live", earnings: 85 },
+    { id: "c4", brand: "Brush & Bolt", type: "Carousel", views: 2100, status: "Live", earnings: 30 },
+    { id: "c5", brand: "Repose Yoga Studio", type: "Reel", views: 0, status: "Pending approval", earnings: 0 },
+    { id: "c6", brand: "Greenhouse Eats", type: "Reel", views: 0, status: "Draft", earnings: 0 },
+  ],
+};

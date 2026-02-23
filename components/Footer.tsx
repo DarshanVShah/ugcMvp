@@ -17,11 +17,13 @@ export function Footer() {
               <li><Link href="/how-it-works" className="text-white/80 hover:text-white">How it works</Link></li>
               <li><Link href="/campaigns" className="text-white/80 hover:text-white">Campaigns</Link></li>
               <li><Link href="/creators" className="text-white/80 hover:text-white">Creators</Link></li>
+              <li><Link href="/dashboard" className="text-white/80 hover:text-white">Creator dashboard</Link></li>
             </ul>
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-white/50">For businesses</p>
             <ul className="mt-3 space-y-2 text-sm">
+              <li><a href="https://slep-back-2.primary-41b.workers.dev/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white">Login as business</a></li>
               <li><Link href="/campaigns#post" className="text-white/80 hover:text-white">Post a campaign</Link></li>
               <li><Link href="/how-it-works#businesses" className="text-white/80 hover:text-white">Pricing</Link></li>
             </ul>
@@ -29,6 +31,7 @@ export function Footer() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-white/50">For creators</p>
             <ul className="mt-3 space-y-2 text-sm">
+              <li><Link href="/dashboard" className="text-white/80 hover:text-white">Creator dashboard</Link></li>
               <li><Link href="/creators#join" className="text-white/80 hover:text-white">Join as creator</Link></li>
               <li><Link href="/how-it-works#creators" className="text-white/80 hover:text-white">Earn with us</Link></li>
             </ul>
