@@ -21,10 +21,10 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link href="/campaigns#post" className="btn-primary">
-                I'm a business
+                I&apos;m a business
               </Link>
               <Link href="/creators#join" className="btn-secondary">
-                I'm a creator
+                I&apos;m a creator
               </Link>
             </div>
           </div>
@@ -34,9 +34,9 @@ export default function HomePage() {
       {/* Problem */}
       <section className="border-b border-brand-sand bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h2 className="section-heading text-center">The two-sided gap we're closing</h2>
+          <h2 className="section-heading text-center">The two-sided gap we&apos;re closing</h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-brand-green/70">
-            Marketing has shifted to social media, but local businesses can't afford established influencers and lack the expertise to compete. Meanwhile, aspiring creators lack opportunities to work with brands due to follower thresholds and entry barriers. Both sides are left out of the revolution that drives how consumers discover and trust brands.
+            Marketing has shifted to social media, but local businesses can&apos;t afford established influencers and lack the expertise to compete. Meanwhile, aspiring creators lack opportunities to work with brands due to follower thresholds and entry barriers. Both sides are left out of the revolution that drives how consumers discover and trust brands.
           </p>
           <div className="mt-12 grid gap-8 sm:grid-cols-2">
             <div className="card">
@@ -48,7 +48,7 @@ export default function HomePage() {
             <div className="card">
               <h3 className="text-lg font-semibold text-brand-green">For creators</h3>
               <p className="mt-2 text-sm text-brand-green/70">
-                Passion over paycheque. You don't need 10k followers—we give you credibility and a launch pad. Create for brands you care about, build a storytelling platform, and earn while staying authentic. Emotional resonance over viral hype.
+                Passion over paycheque. You don&apos;t need 10k followers—we give you credibility and a launch pad. Create for brands you care about, build a storytelling platform, and earn while staying authentic. Emotional resonance over viral hype.
               </p>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="section-heading text-center">Get started in Toronto</h2>
           <p className="mx-auto mt-4 max-w-xl text-center text-brand-green/70">
-            We're starting hyper-local. Join the waitlist and be first when we launch.
+            We&apos;re starting hyper-local. Join the waitlist and be first when we launch.
           </p>
           <div className="mt-12 grid gap-8 sm:grid-cols-2">
             <div className="card border-2 border-brand-sand bg-brand-blush/30 text-center">

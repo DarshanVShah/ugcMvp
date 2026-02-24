@@ -7,7 +7,7 @@ export default function HowItWorksPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <h1 className="section-heading text-center">How Collablee works</h1>
           <p className="mx-auto mt-4 max-w-2xl text-center text-brand-green/70">
-            Same marketplace, two paths. We speak to businesses and creators equally—here's
+            Same marketplace, two paths. We speak to businesses and creators equally—here&apos;s
             the flow for each.
           </p>
         </div>
@@ -148,7 +148,7 @@ export default function HowItWorksPage() {
             Launching in Toronto first
           </h2>
           <p className="mt-4 text-white/80">
-            We're starting hyper-local. Join the waitlist to get early access.
+            We&apos;re starting hyper-local. Join the waitlist to get early access.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link href="/campaigns#post" className="rounded-lg border border-white/30 bg-white/10 px-6 py-3 font-medium text-white hover:bg-white/20">

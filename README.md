@@ -19,6 +19,45 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Deploy on Cloudflare (Pages)
+
+The app is set up for **static export**, so you can deploy it to [Cloudflare Pages](https://developers.cloudflare.com/pages/) (free tier, global CDN).
+
+### 1. Build locally (optional check)
+
+```bash
+npm run build
+```
+
+This produces a static site in the **`out`** folder. Cloudflare will run this for you if you use Git.
+
+### 2. Deploy via Cloudflare dashboard (Git)
+
+1. Push this repo to **GitHub** (or GitLab).
+2. Go to [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+3. Select your repo and set:
+   - **Build command:** `npm run build`
+   - **Build output directory:** `out`
+   - **Root directory:** (leave blank unless the app is in a subfolder)
+4. **Save and Deploy**. Future pushes to the connected branch will trigger new builds.
+
+Your site will be live at `https://<project-name>.pages.dev`.
+
+### 3. Deploy via Wrangler (CLI)
+
+Install [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/) and run:
+
+```bash
+npm run build
+npx wrangler pages deploy out --project-name=collablee
+```
+
+You’ll be prompted to log in and create the Pages project if it doesn’t exist.
+
+### Note
+
+This setup uses **static HTML export** (no server-side rendering or API routes). For full Next.js (SSR, API routes) on Cloudflare, you’d use [Next.js on Cloudflare Workers](https://developers.cloudflare.com/pages/framework-guides/nextjs/) with `@cloudflare/next-on-pages`.
+
 ## Routes
 
 | Route | Description |

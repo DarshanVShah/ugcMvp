@@ -88,8 +88,8 @@ export default function CampaignsPage() {
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
           <h2 className="section-heading">Post a campaign</h2>
           <p className="mt-4 text-brand-green/70">
-            You're a Toronto business and want to get authentic UGC? Describe your campaign,
-            set your budget and metrics, and we'll match you with local creators.
+            You&apos;re a Toronto business and want to get authentic UGC? Describe your campaign,
+            set your budget and metrics, and we&apos;ll match you with local creators.
           </p>
           <div className="mt-8 rounded-2xl border-2 border-dashed border-brand-sand bg-brand-blush/30 p-8">
             <p className="text-sm text-brand-green/60">

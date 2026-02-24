@@ -2,6 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { creators } from "@/lib/mockData";
 
+export function generateStaticParams() {
+  return creators.map((c) => ({ id: c.id }));
+}
+
 export default function CreatorProfilePage({ params }: { params: { id: string } }) {
   const creator = creators.find((c) => c.id === params.id);
   if (!creator) notFound();

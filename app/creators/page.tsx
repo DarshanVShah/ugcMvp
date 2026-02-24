@@ -76,7 +76,7 @@ export default function CreatorsPage() {
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
           <h2 className="section-heading">Join as a creator</h2>
           <p className="mt-4 text-brand-green/70">
-            You don't need 10k followers. Create a profile, browse Toronto campaigns from brands
+            You don&apos;t need 10k followers. Create a profile, browse Toronto campaigns from brands
             you like, and earn base pay plus performance bonuses when your content wins. We give you the launch pad and credibility.
           </p>
           <div className="mt-8 rounded-2xl border-2 border-dashed border-brand-sand bg-brand-blush/30 p-8">

@@ -2,6 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { campaigns } from "@/lib/mockData";
 
+export function generateStaticParams() {
+  return campaigns.map((c) => ({ id: c.id }));
+}
+
 function TypeBadge({ type }: { type: string }) {
   const styles: Record<string, string> = {
     paid: "bg-brand-green/15 text-brand-green",
