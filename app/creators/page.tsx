@@ -11,7 +11,7 @@ export default function CreatorsPage() {
             <div>
               <h1 className="section-heading">Toronto creators</h1>
               <p className="mt-2 text-brand-green/70">
-                Nano-creators who make authentic content for local brands. Passion over paycheque—browse by niche and join at launch.
+                Nano-creators who make authentic content for local brands. From jellycat collectors to foodies — creators like Anna (matched with Matcha & Co.) and the folks below are who we&apos;re here for. Passion over paycheque.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

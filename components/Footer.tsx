@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -6,7 +7,15 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-lg font-bold">Collablee</p>
+            <Link href="/" className="inline-block rounded-lg bg-white/95 p-1.5">
+              <Image
+                src="/logo.jpeg"
+                alt="Collablee"
+                width={120}
+                height={40}
+                className="h-8 w-auto object-contain sm:h-9"
+              />
+            </Link>
             <p className="mt-2 text-sm text-white/70">
               A launchpad for emerging creators. A gateway to influencer marketing for local businesses. Launching in Toronto.
             </p>
@@ -14,6 +23,7 @@ export function Footer() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-white/50">Product</p>
             <ul className="mt-3 space-y-2 text-sm">
+              <li><Link href="/#see-it-in-action" className="text-white/80 hover:text-white">See it in action</Link></li>
               <li><Link href="/how-it-works" className="text-white/80 hover:text-white">How it works</Link></li>
               <li><Link href="/campaigns" className="text-white/80 hover:text-white">Campaigns</Link></li>
               <li><Link href="/creators" className="text-white/80 hover:text-white">Creators</Link></li>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -8,6 +9,7 @@ const BUSINESS_LOGIN_URL = "https://slep-back-2.primary-41b.workers.dev/";
 
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/#see-it-in-action", label: "See it in action" },
   { href: "/how-it-works", label: "How it works" },
   { href: "/campaigns", label: "Campaigns" },
   { href: "/creators", label: "Creators" },
@@ -21,8 +23,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-sand/80 bg-brand-blush/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="text-xl font-bold text-brand-green">
-          Collablee
+        <Link href="/" className="flex shrink-0 items-center">
+          <Image
+            src="/logo.jpeg"
+            alt="Collablee"
+            width={140}
+            height={48}
+            className="h-10 w-auto object-contain sm:h-12"
+            priority
+          />
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map(({ href, label }) => (
