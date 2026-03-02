@@ -9,11 +9,11 @@ export function Footer() {
           <div>
             <Link href="/" className="inline-block rounded-lg bg-white/95 p-1.5">
               <Image
-                src="/logo.jpeg"
+                src="/doggo.png"
                 alt="Collablee"
-                width={120}
-                height={40}
-                className="h-8 w-auto object-contain sm:h-9"
+                width={44}
+                height={44}
+                className="h-10 w-10 object-contain sm:h-11 sm:w-11"
               />
             </Link>
             <p className="mt-2 text-sm text-white/70">

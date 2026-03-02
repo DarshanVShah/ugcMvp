@@ -25,11 +25,11 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex shrink-0 items-center">
           <Image
-            src="/logo.jpeg"
+            src="/doggo.png"
             alt="Collablee"
-            width={140}
+            width={48}
             height={48}
-            className="h-10 w-auto object-contain sm:h-12"
+            className="h-11 w-11 object-contain sm:h-12 sm:w-12"
             priority
           />
         </Link>

@@ -19,12 +19,21 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: [
-          "Helvetica Neue",
-          "Helvetica",
-          "Arial",
-          "sans-serif",
-        ],
+        sans: ["var(--font-nunito)", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+      },
+      keyframes: {
+        "header-fade-in": {
+          "0%": { opacity: "0", transform: "translateY(-6px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "nav-in": {
+          "0%": { opacity: "0", transform: "translateY(-4px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "header-fade-in": "header-fade-in 0.5s ease-out forwards",
+        "nav-in": "nav-in 0.4s ease-out forwards",
       },
     },
   },
