@@ -1,4 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
+
+const STEP_IMAGES = {
+  business: [
+    "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=600&q=80", // laptop / post campaign
+    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80", // team / review
+    "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&q=80", // phone content
+    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",   // handshake / pay
+  ],
+  creator: [
+    "https://images.unsplash.com/photo-1531746795393-6c60dcabbabc?w=600&q=80", // laptop profile
+    "/cafeimage.jpg", // browse campaigns (cafe)
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80", // create content
+    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",   // earn / handshake
+  ],
+};
 
 export default function HowItWorksPage() {
   return (
@@ -10,6 +26,15 @@ export default function HowItWorksPage() {
             Same marketplace, two paths. We speak to businesses and creators equally—here&apos;s
             the flow for each.
           </p>
+          <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl shadow-lg">
+            <Image
+              src="/cafeimage.jpg"
+              alt="Local cafe — where businesses and creators connect"
+              width={900}
+              height={600}
+              className="h-56 w-full object-cover sm:h-72"
+            />
+          </div>
         </div>
       </section>
 
@@ -20,7 +45,7 @@ export default function HowItWorksPage() {
           <p className="mt-2 max-w-xl text-brand-green/70">
             Get authentic UGC without agency budgets. Pay for content that performs. Trust that creators will deliver—we handle agreements, payments, and operations.
           </p>
-          <ol className="mt-12 space-y-10">
+          <ol className="mt-12 space-y-14">
             {[
               {
                 step: 1,
@@ -42,14 +67,25 @@ export default function HowItWorksPage() {
                 title: "Pay for performance",
                 body: "Platform tracks views, engagement, and conversions via tracking links or codes. Base pay for approved content; tiered bonuses when it hits agreed thresholds. You only pay more when content works.",
               },
-            ].map(({ step, title, body }) => (
-              <li key={step} className="flex gap-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-green/15 font-bold text-brand-green">
-                  {step}
+            ].map(({ step, title, body }, i) => (
+              <li key={step} className={`flex flex-col gap-6 sm:gap-8 ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} md:items-center`}>
+                <div className="relative h-52 w-full shrink-0 overflow-hidden rounded-2xl bg-brand-sand/50 md:h-56 md:max-w-sm">
+                  <Image
+                    src={STEP_IMAGES.business[i]}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-green">{title}</h3>
-                  <p className="mt-2 text-brand-green/70">{body}</p>
+                <div className="flex min-w-0 flex-1 gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-green/15 text-lg font-bold text-brand-green">
+                    {step}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-brand-green">{title}</h3>
+                    <p className="mt-2 text-brand-green/70">{body}</p>
+                  </div>
                 </div>
               </li>
             ))}
@@ -69,7 +105,7 @@ export default function HowItWorksPage() {
           <p className="mt-2 max-w-xl text-brand-green/70">
             Earn from home. Work with brands you like. Get base pay plus upside when your content wins. Passion over paycheque—we give you a launch pad and credibility.
           </p>
-          <ol className="mt-12 space-y-10">
+          <ol className="mt-12 space-y-14">
             {[
               {
                 step: 1,
@@ -91,14 +127,25 @@ export default function HowItWorksPage() {
                 title: "Earn base + bonus",
                 body: "Get guaranteed base pay for approved content. When your content hits view or engagement tiers, you earn bonuses. Example: $10 base, $40 at 10k views, $150 on conversion. Clear upside for good work.",
               },
-            ].map(({ step, title, body }) => (
-              <li key={step} className="flex gap-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-green/15 font-bold text-brand-green">
-                  {step}
+            ].map(({ step, title, body }, i) => (
+              <li key={step} className={`flex flex-col gap-6 sm:gap-8 ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} md:items-center`}>
+                <div className="relative h-52 w-full shrink-0 overflow-hidden rounded-2xl bg-brand-sand/50 md:h-56 md:max-w-sm">
+                  <Image
+                    src={STEP_IMAGES.creator[i]}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-brand-green">{title}</h3>
-                  <p className="mt-2 text-brand-green/70">{body}</p>
+                <div className="flex min-w-0 flex-1 gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-green/15 text-lg font-bold text-brand-green">
+                    {step}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-brand-green">{title}</h3>
+                    <p className="mt-2 text-brand-green/70">{body}</p>
+                  </div>
                 </div>
               </li>
             ))}
@@ -118,6 +165,15 @@ export default function HowItWorksPage() {
           <p className="mx-auto mt-4 max-w-xl text-center text-brand-green/70">
             We facilitate the collaboration and keep everyone aligned. Clear contracts, record of communication, and arbitration when needed.
           </p>
+          <div className="mx-auto mt-10 max-w-md overflow-hidden rounded-2xl shadow-md">
+            <Image
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80"
+              alt=""
+              width={700}
+              height={467}
+              className="h-48 w-full object-cover"
+            />
+          </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             <div className="card text-center">
               <h3 className="font-semibold text-brand-green">Clear contracts</h3>
