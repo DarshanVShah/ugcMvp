@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { WaitlistForm } from "@/components/WaitlistForm";
 
-const HERO_IMAGE = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80";
 const BUSINESS_IMAGE = "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80";
 const CREATOR_IMAGE = "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=600&q=80";
 const COMMUNITY_IMAGE = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80";
@@ -37,8 +36,8 @@ export default function HomePage() {
             </div>
             <div className="relative w-full max-w-md flex-shrink-0 overflow-hidden rounded-2xl shadow-lg lg:max-w-sm">
               <Image
-                src={HERO_IMAGE}
-                alt="People collaborating and creating together"
+                src="/cafeimage.jpg"
+                alt="Cozy cafe — real connections between local businesses and creators"
                 width={800}
                 height={533}
                 className="h-64 w-full object-cover sm:h-80 lg:h-96"
@@ -180,15 +179,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AI use cases — demo worthy */}
+      {/* AI — in the background, so the spotlight stays on people */}
       <section className="border-b border-brand-sand bg-brand-blush py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
-          <h2 className="section-heading">Powered by AI, felt by humans</h2>
+          <h2 className="section-heading">Tech in the background, people in the foreground</h2>
           <p className="mt-6 text-lg text-brand-green/85 leading-relaxed">
-            Our AI handles onboarding, matches creators to businesses by neighbourhood, and will be used to generate a creator compatibility score in the future — all in the background, so every collaboration feels human.
+            We use AI to make the logistics easier—onboarding, matching creators to businesses by neighbourhood, and soon a compatibility score so both sides find the right fit faster. None of that replaces the real part: the conversation, the handshake, the content you create together. Our job is to get you in the same room (or the same DMs) so the authentic stuff can happen.
           </p>
           <p className="mt-4 text-brand-green/70">
-            Let us show you.
+            Think of it like a friendly host who makes introductions—then steps back so you can connect.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
             <span className="rounded-full bg-brand-green/10 px-4 py-2 text-sm font-medium text-brand-green">
