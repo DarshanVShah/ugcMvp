@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { creators } from "@/lib/mockData";
 import { WaitlistForm } from "@/components/WaitlistForm";
 
@@ -36,8 +37,12 @@ export default function CreatorsPage() {
                   className="card block transition hover:border-brand-green/30"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-green/15 text-lg font-semibold text-brand-green">
-                      {creator.avatar}
+                    <div className="flex h-14 w-14 shrink-0 overflow-hidden rounded-full bg-brand-green/15">
+                      {creator.avatarImage ? (
+                        <Image src={creator.avatarImage} alt="" width={56} height={56} className="h-14 w-14 object-cover" />
+                      ) : (
+                        <span className="flex h-full w-full items-center justify-center text-lg font-semibold text-brand-green">{creator.avatar}</span>
+                      )}
                     </div>
                     <div className="min-w-0 flex-1">
                       <h2 className="font-semibold text-brand-green">

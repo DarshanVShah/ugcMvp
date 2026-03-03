@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { creatorDashboard } from "@/lib/mockData";
 
 const { creator, stats, activeCollabs, contentPerformance } = creatorDashboard;
@@ -11,8 +12,12 @@ export default function CreatorDashboardPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand-green/15 text-xl font-semibold text-brand-green">
-                {creator.avatar}
+              <div className="flex h-14 w-14 shrink-0 overflow-hidden rounded-full bg-brand-green/15">
+                {creator.avatarImage ? (
+                  <Image src={creator.avatarImage} alt="" width={56} height={56} className="h-14 w-14 object-cover" />
+                ) : (
+                  <span className="flex h-full w-full items-center justify-center text-xl font-semibold text-brand-green">{creator.avatar}</span>
+                )}
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-brand-green">Creator Dashboard</h1>

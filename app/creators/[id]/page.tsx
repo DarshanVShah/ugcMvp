@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { creators } from "@/lib/mockData";
 
@@ -18,8 +19,12 @@ export default function CreatorProfilePage({ params }: { params: { id: string } 
             ← Back to creators
           </Link>
           <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-            <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-brand-green/15 text-3xl font-semibold text-brand-green">
-              {creator.avatar}
+            <div className="flex h-24 w-24 shrink-0 overflow-hidden rounded-full bg-brand-green/15">
+              {creator.avatarImage ? (
+                <Image src={creator.avatarImage} alt="" width={96} height={96} className="h-24 w-24 object-cover" />
+              ) : (
+                <span className="flex h-full w-full items-center justify-center text-3xl font-semibold text-brand-green">{creator.avatar}</span>
+              )}
             </div>
             <div>
               <h1 className="text-2xl font-bold text-brand-green">

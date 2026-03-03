@@ -28,6 +28,7 @@ export interface Creator {
   joinedAt: string;
   campaignsCompleted: number;
   avatar: string; // placeholder or initials
+  avatarImage?: string; // optional profile image path (e.g. /annapfp.png)
 }
 
 export const campaigns: Campaign[] = [
@@ -201,6 +202,7 @@ export const creators: Creator[] = [
     joinedAt: "Feb 2025",
     campaignsCompleted: 1,
     avatar: "A",
+    avatarImage: "/annapfp.png",
   },
 ];
 
