@@ -23,15 +23,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-sand/80 bg-brand-blush/95 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex shrink-0 items-center">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <Image
             src="/doggo.png"
-            alt="Collablee"
+            alt=""
             width={48}
             height={48}
             className="h-11 w-11 object-contain sm:h-12 sm:w-12"
             priority
           />
+          <span className="text-xl font-bold text-brand-green sm:text-2xl">Collablee</span>
         </Link>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map(({ href, label }) => (

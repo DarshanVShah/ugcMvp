@@ -32,6 +32,21 @@ export interface Creator {
 
 export const campaigns: Campaign[] = [
   {
+    id: "matcha",
+    businessName: "Matcha & Co.",
+    tagline: "Downtown Toronto · Specialty matcha & jellycat corner",
+    category: "Food & Drink",
+    type: "paid",
+    status: "open",
+    description:
+      "Promote our new jellycat café corner. We're known for our matcha lattes (strawberry matcha, banana pudding matcha) and carry jellycats on display in the corner of the store. Newly opened, looking to attract more customers. Collablee surfaces nearby lifestyle creators — we pick a genuine jellycat lover with an engaged community. Agreement in-app, authentic UGC within a week for $50.",
+    contentFormat: "Short-form video (Reel/TikTok) — cozy café vlog featuring our jellycat display",
+    compensation: "$50. Agreement handled in-app, payment via Stripe.",
+    location: "Downtown Toronto",
+    postedAt: "1 week ago",
+    applicationsCount: 3,
+  },
+  {
     id: "1",
     businessName: "Neighbourhood Coffee",
     tagline: "Independent café in Leslieville",
@@ -174,27 +189,57 @@ export const creators: Creator[] = [
     campaignsCompleted: 3,
     avatar: "PS",
   },
+  {
+    id: "6",
+    name: "Anna",
+    handle: "@annajellycats",
+    niche: ["Jellycat", "Cafes", "Matcha", "Local Toronto"],
+    followerRange: "340",
+    bio: "Jellycat collector with 50+ reels on Instagram & TikTok. Creates authentic UGC about jellycats and local cafes — especially matcha spots around Toronto. Looking to collab with local gift shops, hobby stores, and cafes.",
+    location: "Toronto",
+    contentTypes: ["Reels", "TikTok"],
+    joinedAt: "Feb 2025",
+    campaignsCompleted: 1,
+    avatar: "A",
+  },
 ];
 
-// Example creator dashboard (logged-in view)
+// Matcha & Co. — downtown Toronto cafe (jellycat corner, specialty matcha)
+export const matchaCoCampaign = {
+  id: "matcha",
+  businessName: "Matcha & Co.",
+  tagline: "Downtown Toronto · Specialty matcha & jellycat corner",
+  category: "Food & Drink",
+  description: "Promote our new jellycat café corner. We're known for our matcha lattes (strawberry matcha, banana pudding matcha) and carry jellycats on display. Newly opened, looking to attract more customers.",
+  location: "Downtown Toronto",
+  compensation: "$50 for authentic UGC posted within a week. Agreement handled in-app, payment via Stripe.",
+};
+
+// Creator dashboard: Anna's view (Matcha & Co. storyline)
 export const creatorDashboard = {
-  creator: creators[0], // Maya Chen as example
+  creator: creators[5], // Anna (id "6" is index 5)
   stats: {
-    totalEarnings: 340,
-    pendingPayout: 65,
-    activeCollabs: 2,
-    contentSubmitted: 6,
+    totalEarnings: 50,
+    pendingPayout: 0,
+    activeCollabs: 1,
+    contentSubmitted: 1,
   },
   activeCollabs: [
-    { id: "1", businessName: "Neighbourhood Coffee", status: "Content approved, tracking", deadline: "Mar 15" },
-    { id: "5", businessName: "Greenhouse Eats", status: "Draft due", deadline: "Feb 20" },
+    {
+      id: "matcha",
+      businessName: "Matcha & Co.",
+      status: "Content approved · UGC posted within a week. Paid via Stripe.",
+      deadline: "Completed",
+    },
   ],
   contentPerformance: [
-    { id: "c1", brand: "Neighbourhood Coffee", type: "Reel", views: 12400, status: "Live", earnings: 125 },
-    { id: "c2", brand: "Neighbourhood Coffee", type: "Reel", views: 3200, status: "Live", earnings: 25 },
-    { id: "c3", brand: "Greenhouse Eats", type: "Reel", views: 8900, status: "Live", earnings: 85 },
-    { id: "c4", brand: "Brush & Bolt", type: "Carousel", views: 2100, status: "Live", earnings: 30 },
-    { id: "c5", brand: "Repose Yoga Studio", type: "Reel", views: 0, status: "Pending approval", earnings: 0 },
-    { id: "c6", brand: "Greenhouse Eats", type: "Reel", views: 0, status: "Draft", earnings: 0 },
+    {
+      id: "c1",
+      brand: "Matcha & Co.",
+      type: "Café vlog (Reel)",
+      views: 4200,
+      status: "Live",
+      earnings: 50,
+    },
   ],
 };

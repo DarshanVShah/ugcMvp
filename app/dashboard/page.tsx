@@ -132,7 +132,7 @@ export default function CreatorDashboardPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-brand-green/80">
-              Need to submit content or update your profile? Head to your active collabs or browse new campaigns.
+              Found a campaign in two taps, got accepted in an hour — that&apos;s the Collablee flow. Browse more local cafes and gift shops or update your profile.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link href="/campaigns" className="btn-primary text-sm py-2 px-4">
